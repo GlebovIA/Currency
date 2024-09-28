@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         String composition = "";
         if(dollar.isChecked()){
-            composition = f_rate/f_sum + " р.";
+            composition = f_rate*f_sum + " р.";
         }
         else
             composition = f_sum/f_rate + " $.";
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void URL(View view){
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.sberbank.ru/ru/quotes/currency"));
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.sberbank.ru/ru/quotes/currencies"));
         startActivity(intent);
     }
 }
